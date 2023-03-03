@@ -1,15 +1,22 @@
-import sumar from "./sumador";
+// import sumar from "./sumador";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
-const div = document.querySelector("#resultado-div");
+// const first = document.querySelector("#primer-numero");
+// const second = document.querySelector("#segundo-numero");
+
+const titulo = document.querySelector("#nota_titulo");
+const form = document.querySelector("#form-CrearNota");
+const array=["nota 1","nota 2","nota 3"];
+const lista=document.getElementById('lista');
+
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
-
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  let tit=titulo.value;
+  array.push(tit);
+  for(let i=0;i<array.length;i++){
+    const nota=array[i];
+    const li=document.createElement('li');
+    li.textContent=nota;
+    lista.appendChild(li);
+  }
 });

@@ -1,15 +1,27 @@
+<!DOCTYPE html>
 <html>
-  <body>
-    <h1>Sumador</h1>
-    <form id="sumar-form">
-      <label for="primer-numero">Primer número:</label>
-      <input type="number" id="primer-numero" />
-      <label for="segundo-numero">Segundo número:</label>
-      <input type="number" id="segundo-numero" />
-      <input type="submit" value="Sumar" id="sumar-button" />
-    </form>
-    <div id="resultado-div"></div>
-
-    <script type="module" src="./src/presenter.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KEEP</title>
+</head>
+<body>
+  <h1> KEEP </h1>
+  <label>Buscar Nota: </label>
+  <input type="search" id="buscador" placeholder="Ingrese un titulo o una descripcion"> 
+  <form id="form-CrearNota">
+    <h3>Nota: </h3>
+    <label>Titulo: </label>
+    <input type="text" id="nota_titulo" required>
+    <p> </p>
+    <label>Descripcion: </label>
+    <input type="text" id="nota_desc" > 
+    <button type="submit" id="btn_crearNota">CREAR</button>
+  </form>
+  <p> </p>
+  <h3> Tus Notas: </h3>
+  <ul id="lista"> </ul>
+  <script type="module" src="./src/presenter.js"></script>
+</body>
 </html>
