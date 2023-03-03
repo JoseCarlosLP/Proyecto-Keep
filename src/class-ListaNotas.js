@@ -13,6 +13,9 @@ class ListaNotas {
       let nota=this.arr[i];
       const li=document.createElement('li');
       li.innerHTML="<b> Titulo: </b>" + nota.titulo;
+      if(nota.descripcion!="")
+        li.innerHTML+="<br> <b> Descripcion : </b>" + nota.descripcion;
+      li.innerHTML+="<br> <br>";
       lista.appendChild(li);
     }
     return lista;
