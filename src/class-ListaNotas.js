@@ -1,11 +1,9 @@
 class ListaNotas {
   constructor() {
     this.arr=[];
-    this.ult=0;
   }
   agregarNota(Nota){
     this.arr.push(Nota);
-    this.ult++;
   }
   mostrarNotas(lista)
   {
@@ -16,9 +14,28 @@ class ListaNotas {
       if(nota.descripcion!="")
         li.innerHTML+="<br> <b> Descripcion : </b>" + nota.descripcion;
       li.innerHTML+="<br> <br>";
-      lista.appendChild(li);
+
+      //BOTON ELIMINAR NOTA
+      const botonBorrar = document.createElement('button');
+      botonBorrar.innerHTML = "BORRAR";
+
+      const LN = this; //crear una instancia y poder trabajar con eventos a continuacion
+
+      botonBorrar.addEventListener('click', function() {
+        LN.arr.splice(i,1); //elimina 1 (2do parametro) elemento de un array dada una posicion (1er parametro)
+        lista.innerHTML = ''; //sobre escribe un espacio en blanco en esa seccion
+        LN.mostrarNotas(lista); //vuelve a mostrar la lista despues de haber sido modificada
+      });
+
+      lista.appendChild(li);//muestra la fila "li" (itera en i)
+      li.appendChild(botonBorrar); //muestra el botonborrar
+      li.innerHTML+="<br> <br>";
     }
     return lista;
+  }
+  eliminarNota()
+  {
+    
   }
 }
 
