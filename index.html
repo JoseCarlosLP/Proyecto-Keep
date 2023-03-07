@@ -6,17 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KEEP</title>
 </head>
+
 <body>
   <h1> KEEP </h1>
   <label>Buscar Nota: </label>
-  <input type="search" id="buscador" placeholder="Ingrese un titulo o una descripcion">
+  <input type="search" id="buscador" placeholder="Ingrese un titulo o una descripcion" size="30">
   <form id="form-CrearNota">
     <h3>Nota: </h3>
     <label>Titulo: </label>
-    <input type="text" id="nota_titulo" required>
+    <input type="text" id="nota_titulo" required size="35">
     <p> </p>
     <label>Descripcion: </label>
-    <input type="text" id="nota_desc" > 
+    <!-- <input type="text" id="nota_desc" style="height:100px" size="29">  -->
+    <textarea type="text" id="nota_desc" rows="5" cols="40"></textarea>
+    <p> </p>
     <button type="submit" id="btn_crearNota">CREAR</button>
   </form>
   <p> </p>
