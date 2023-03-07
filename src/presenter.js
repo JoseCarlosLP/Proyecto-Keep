@@ -5,6 +5,7 @@ const titulo = document.querySelector("#nota_titulo");
 const descripcion = document.querySelector("#nota_desc");
 const form = document.querySelector("#form-CrearNota");
 let lista = document.getElementById('lista');
+const busqueda = document.getElementById("buscador");
 const LN = new ListaNotas();
 let id = 0;
 
@@ -19,11 +20,5 @@ form.addEventListener("submit", (event) => {
 
   LN.agregarNota(nota1);
 
-  lista = LN.mostrarNotas(lista);
+  lista = LN.mostrarNotas(lista,busqueda);
 });
-
-// asdasd
-
-// botones.forEach(boton => {
-//   boton.addEventListener("click",lis);
-// });
